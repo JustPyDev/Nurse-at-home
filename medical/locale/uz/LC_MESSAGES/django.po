@@ -1,0 +1,295 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-03-28 19:24+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: .\ambulance\models.py:7 .\ambulance\models.py:20 .\ambulance\models.py:30
+#: .\ambulance\models.py:40 .\ambulance\models.py:92 .\ambulance\models.py:114
+#: .\ambulance\models.py:124 .\ambulance\models.py:134
+msgid "name"
+msgstr "имя"
+
+#: .\ambulance\models.py:8 .\ambulance\models.py:21 .\ambulance\models.py:41
+msgid "slug"
+msgstr "слуг"
+
+#: .\ambulance\models.py:23 .\ambulance\models.py:45 .\ambulance\models.py:93
+msgid "character"
+msgstr "характеристика"
+
+#: .\ambulance\models.py:32 .\ambulance\models.py:82 .\ambulance\models.py:104
+msgid "phone_number"
+msgstr "номер телефона"
+
+#: .\ambulance\models.py:42
+msgid "price"
+msgstr "цена"
+
+#: .\ambulance\models.py:43
+msgid "type_price"
+msgstr "валюта"
+
+#: .\ambulance\models.py:52
+msgid "name_services"
+msgstr "ммя наших услугах"
+
+#: .\ambulance\models.py:53
+msgid "about_services"
+msgstr "о наших услугах"
+
+#: .\ambulance\models.py:54
+msgid "name_nurses"
+msgstr "имя медсестрах"
+
+#: .\ambulance\models.py:55
+msgid "about_nurses"
+msgstr "о медсестрах"
+
+#: .\ambulance\models.py:56
+msgid "name_search"
+msgstr "имя поисковой системе"
+
+#: .\ambulance\models.py:57
+msgid "about_search"
+msgstr "о поисковой системе"
+
+#: .\ambulance\models.py:58
+msgid "name_choose"
+msgstr "имя нижние текста"
+
+#: .\ambulance\models.py:59
+msgid "choose_us"
+msgstr "нижние текст"
+
+#: .\ambulance\models.py:60 .\ambulance\models.py:94
+msgid "image"
+msgstr "изображение"
+
+#: .\ambulance\models.py:67
+msgid "name_header"
+msgstr "имя для верхние заголовка"
+
+#: .\ambulance\models.py:68
+msgid "about_header"
+msgstr "верхние текст заголовка"
+
+#: .\ambulance\models.py:69
+msgid "image_header"
+msgstr "верхние картинки "
+
+#: .\ambulance\models.py:70
+msgid "name_footer"
+msgstr "имя для нижние заголовка"
+
+#: .\ambulance\models.py:71
+msgid "about_footer"
+msgstr "нижние текст заголовка"
+
+#: .\ambulance\models.py:72
+msgid "image_footer"
+msgstr "нижние картинки"
+
+#: .\ambulance\models.py:79 .\ambulance\models.py:101
+msgid "working_time"
+msgstr "рабочее время"
+
+#: .\ambulance\models.py:80 .\ambulance\models.py:102
+msgid "city"
+msgstr "город"
+
+#: .\ambulance\models.py:81 .\ambulance\models.py:103
+msgid "address"
+msgstr "адрес"
+
+#: .\ambulance\models.py:84 .\ambulance\models.py:106
+msgid "emergency_number"
+msgstr "номер экстренной помощи"
+
+#: .\ambulance\models.py:85 .\ambulance\models.py:107
+msgid "about_site"
+msgstr "о сайте"
+
+#: .\ambulance\models.py:115 .\ambulance\models.py:127
+#: .\ambulance\models.py:137
+msgid "number"
+msgstr "номер телефона"
+
+#: .\ambulance\models.py:116
+msgid "map"
+msgstr "адрес"
+
+#: .\ambulance\models.py:125 .\ambulance\models.py:135
+msgid "last_name"
+msgstr "фамилия"
+
+#: .\ambulance\models.py:126 .\ambulance\models.py:136
+msgid "age"
+msgstr "возраст"
+
+#: .\medical\settings.py:122
+msgid "Russia"
+msgstr "Русский"
+
+#: .\medical\settings.py:123
+msgid "Uzbekistan"
+msgstr "O`zbekcha"
+
+#: .\templates\about-us.html:66 .\templates\all_services.html:66
+#: .\templates\contact.html:66 .\templates\index.html:65
+#: .\templates\services.html:66 .\templates\services_menu.html:66
+#: .\templates\servicespk.html:65
+msgid "Услуги"
+msgstr "Xizmatlar"
+
+#: .\templates\about-us.html:74 .\templates\all_services.html:74
+#: .\templates\contact.html:74 .\templates\index.html:73
+#: .\templates\services.html:74 .\templates\services_menu.html:74
+#: .\templates\servicespk.html:73
+msgid "Главная Страница"
+msgstr "Bosh sahifa"
+
+#: .\templates\about-us.html:77 .\templates\about-us.html:104
+#: .\templates\all_services.html:77 .\templates\contact.html:77
+#: .\templates\index.html:76 .\templates\services.html:77
+#: .\templates\services_menu.html:77 .\templates\servicespk.html:76
+msgid "О Нас"
+msgstr "Biz haqimizda"
+
+#: .\templates\about-us.html:80 .\templates\all_services.html:80
+#: .\templates\all_services.html:105 .\templates\contact.html:80
+#: .\templates\index.html:79 .\templates\services.html:80
+#: .\templates\services_menu.html:80 .\templates\servicespk.html:79
+msgid "Все Услуги"
+msgstr "Barcha xizmatlar"
+
+#: .\templates\about-us.html:83 .\templates\about-us.html:226
+#: .\templates\all_services.html:83 .\templates\all_services.html:183
+#: .\templates\contact.html:83 .\templates\contact.html:104
+#: .\templates\contact.html:226 .\templates\index.html:82
+#: .\templates\index.html:293 .\templates\services.html:83
+#: .\templates\services.html:184 .\templates\services_menu.html:83
+#: .\templates\services_menu.html:185 .\templates\servicespk.html:82
+#: .\templates\servicespk.html:239
+msgid "Контакты"
+msgstr "Kontaktlar"
+
+#: .\templates\about-us.html:87 .\templates\all_services.html:87
+#: .\templates\contact.html:87 .\templates\index.html:86
+#: .\templates\services.html:87 .\templates\services_menu.html:87
+#: .\templates\servicespk.html:86
+msgid "Заказать звонок"
+msgstr "Bog`lanish uchun"
+
+#: .\templates\about-us.html:138 .\templates\index.html:177
+msgid "Все услуги"
+msgstr "Barcha xizmatlar"
+
+#: .\templates\about-us.html:146 .\templates\index.html:185
+msgid "Все клиенты"
+msgstr "Barcha mijozlar"
+
+#: .\templates\about-us.html:154 .\templates\index.html:193
+msgid "Все медсестры"
+msgstr "Barcha hamshiralar"
+
+#: .\templates\about-us.html:162 .\templates\index.html:201
+msgid "Все врачи"
+msgstr "Barcha Shifokorlar"
+
+#: .\templates\about-us.html:217 .\templates\all_services.html:174
+#: .\templates\contact.html:217 .\templates\index.html:284
+#: .\templates\services.html:175 .\templates\services_menu.html:176
+#: .\templates\servicespk.html:230
+msgid "Заказать Звонок"
+msgstr "Bog`lanish uchun"
+
+#: .\templates\about-us.html:237 .\templates\all_services.html:194
+#: .\templates\contact.html:117 .\templates\contact.html:237
+#: .\templates\index.html:304 .\templates\services.html:195
+#: .\templates\services_menu.html:196 .\templates\servicespk.html:250
+msgid "Позвоните Или Напишите Нам"
+msgstr "Bizga qo'ng'iroq qiling yoki xabar yuboring"
+
+#: .\templates\about-us.html:242 .\templates\all_services.html:199
+#: .\templates\contact.html:122 .\templates\contact.html:242
+#: .\templates\index.html:309 .\templates\services.html:200
+#: .\templates\services_menu.html:201 .\templates\servicespk.html:124
+#: .\templates\servicespk.html:255
+msgid "Имя"
+msgstr "Ism"
+
+#: .\templates\about-us.html:243 .\templates\all_services.html:200
+#: .\templates\contact.html:125 .\templates\contact.html:243
+#: .\templates\index.html:310 .\templates\services.html:201
+#: .\templates\services_menu.html:202 .\templates\servicespk.html:256
+msgid "Email"
+msgstr "Elektron pochta"
+
+#: .\templates\about-us.html:244 .\templates\all_services.html:201
+#: .\templates\contact.html:128 .\templates\contact.html:244
+#: .\templates\index.html:311 .\templates\services.html:202
+#: .\templates\services_menu.html:203 .\templates\servicespk.html:129
+#: .\templates\servicespk.html:257
+msgid "Телефон ( обезательно )"
+msgstr "Telefon raqam"
+
+#: .\templates\about-us.html:245 .\templates\all_services.html:202
+#: .\templates\contact.html:131 .\templates\contact.html:245
+#: .\templates\index.html:312 .\templates\services.html:203
+#: .\templates\services_menu.html:204 .\templates\servicespk.html:258
+msgid "Сообщение"
+msgstr "Xabar"
+
+#: .\templates\about-us.html:246 .\templates\all_services.html:203
+#: .\templates\contact.html:133 .\templates\contact.html:246
+#: .\templates\index.html:313 .\templates\services.html:204
+#: .\templates\services_menu.html:205 .\templates\servicespk.html:139
+#: .\templates\servicespk.html:259
+msgid "Отправить"
+msgstr "Jo`natish"
+
+#: .\templates\about-us.html:254 .\templates\all_services.html:211
+#: .\templates\contact.html:254 .\templates\index.html:322
+#: .\templates\services.html:213 .\templates\services_menu.html:214
+#: .\templates\servicespk.html:268
+msgid "Мы Роботаем"
+msgstr "Biz ishlaymiz"
+
+#: .\templates\contact.html:175 .\templates\index.html:239
+msgid "Для экстренных вызовов"
+msgstr "Favqulodda qo'ng'iroqlar uchun"
+
+#: .\templates\index.html:103
+msgid "Медсестра на дом"
+msgstr "Медсестра на дом"
+
+#: .\templates\index.html:103
+msgid "Самые надежные"
+msgstr "Eng ishonchli"
+
+#: .\templates\index.html:103
+msgid "медицинские услуги"
+msgstr "tibbiy xizmatlar"
+
+#: .\templates\servicespk.html:103
+msgid "Связаться с нами"
+msgstr "Biz bilan bog`lanish"
+
+#: .\templates\servicespk.html:134
+msgid "Ваш адрес"
+msgstr "Manzilingiz"

@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load i18n %}
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <!-- Title  -->
+    <title>{% trans 'Медсестра на дом' %} - {{ ser_pk.name }}</title>
+
+    <!-- Favicon  -->
+    <link rel="icon" href="{% static 'img/core-img/logo_med.png' %}">
+
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="medilife-load"></div>
+    </div>
+
+    <!-- ***** Header Area Start ***** -->
+    <header class="header-area">
+        <!-- Top Header Area -->
+        <div class="top-header-area">
+            <div class="container h-100">
+                <div class="row h-100">
+                    <div class="col-12 h-100">
+                        <div class="h-100 d-md-flex justify-content-between align-items-center">
+                            <p><span></span></p>
+                            {% for i in about_us %}
+                            {% if forloop.counter0 < 1 %}
+                            <p>{{ i.working_time }} : <span> {{ i.phone_number }}</span></p>
+                            {% endif %}
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Header Area -->
+        <div class="main-header-area" id="stickyHeader">
+            <div class="container h-100">
+                <div class="row h-100 align-items-center">
+                    <div class="col-12 h-100">
+                        <div class="main-menu h-100">
+                            <nav class="navbar h-100 navbar-expand-lg">
+                                <!-- Logo Area  -->
+                                <a class="navbar-brand" href="{% url 'home' %}"><img src="{% static 'img/core-img/zeed.png' %}" alt="Logo"></a>
+
+                                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#medilifeMenu" aria-controls="medilifeMenu" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+
+                                <div class="collapse navbar-collapse" id="medilifeMenu">
+                                    <!-- Menu Area -->
+                                    <ul class="navbar-nav ml-auto">
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{% trans 'Услуги' %}</a>
+                                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                                {% for i in ser %}
+                                                <a class="dropdown-item" href="{% url 'ser_one' slug=i.slug %}">{{ i.name }}</a>
+                                                {% endfor %}
+                                            </div>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="{% url 'home' %}">{% trans 'Главная Страница' %}</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="{% url 'about' %}">{% trans 'О Нас' %}</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="{% url 'all_services' %}">{% trans 'Все Услуги' %}</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="{% url 'contact' %}">{% trans 'Контакты' %}</a>
+                                        </li>
+                                    </ul>
+                                    <!-- Appointment Button -->
+                                    <a href="{% url 'contact' %}" class="btn medilife-appoint-btn ml-30"><span>{% trans 'Заказать звонок' %}</span></a>
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ***** Header Area End ***** -->
+
+
+    <!-- ***** Breadcumb Area Start ***** -->
+    <section class="breadcumb-area bg-img gradient-background-overlay" style="background-image: url({% static 'img/bg-img/breadcumb2.jpg' %});">
+        <div class="container h-100">
+            <div class="row h-100 align-items-center">
+                <div class="col-12">
+                    <div class="breadcumb-content">
+                        <h3 class="breadcumb-title">{{ ser_pk.name }}</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ***** Breadcumb Area End ***** -->
+
+    <!-- ***** Services Area Start ***** -->
+    <div class="medilife-services-area section-padding-100-20">
+        <div class="container">
+            <div class="row">
+                <!-- Single Service Area -->
+                {% for i in service %}
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="single-service-area d-flex">
+                        <div class="service-icon">
+                            <i class="icon-doctor"></i>
+                        </div>
+                        <div class="service-content">
+                            <a href="{% url 'servic_one' pk=i.id %}">
+                                <h5>{{ i.name }}</h5>
+                                <h6>{{ i.character }}</h6><h7><em>{{ i.price }} {{ i.type_price }}</em></h7>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    <!-- ***** Services Area End ***** -->
+     <div class="medilife-features-area section-padding-100">
+        <div class="container">
+            {% for i in plus %}
+            {% if forloop.counter0 < 1 %}
+            <div class="row align-items-center">
+                <div class="col-12 col-lg-6">
+                    <div class="features-content">
+                        <h2>{{ i.name }}</h2>
+                        <p>{{ i.character }}</p>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6">
+                    <div class="features-thumbnail">
+                        <img src="{{ i.image.url }}" alt="">
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+    <!-- ***** Footer Area Start ***** -->
+    <footer class="footer-area section-padding-100">
+        <!-- Main Footer Area -->
+        <div class="main-footer-area">
+            <div class="container-fluid">
+                <div class="row">
+
+                    <div class="col-12 col-sm-6 col-xl-3">
+                        <div class="footer-widget-area">
+                            <div class="footer-logo">
+                                <img src="{% static 'img/core-img/zeed.png' %}" alt="">
+                            </div>
+                            {% for i in data %}
+                            {% if forloop.counter0 < 1 %}
+                            <p>{{ i.about_site }}</p>
+                            {% endif %}
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-xl-3">
+                        <div class="footer-widget-area">
+                            <div class="widget-title">
+                                <h6>{% trans 'Заказать Звонок' %}</h6>
+                            </div>
+                            <div class="widget-blog-post">
+                                <!-- Single Blog Post -->
+                                <div class="widget-single-blog-post d-flex">
+                                    <div class="widget-post-thumbnail">
+                                        <img src="{% static 'img/bg-img/aa.jpg' %}" alt="">
+                                    </div>
+                                    <div class="widget-post-content">
+                                        <a href="{% url 'contact' %}">{% trans 'Контакты' %}</a>
+                                        <p></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-xl-3">
+                        <div class="footer-widget-area">
+                            <div class="widget-title">
+                                <h6>{% trans 'Позвоните Или Напишите Нам' %}</h6>
+                            </div>
+                            <div class="footer-contact-form">
+                                <form method="post">
+                                    {% csrf_token %}
+                                    <input type="text" class="form-control border-top-0 border-right-0 border-left-0" name="name" id="footer-name" placeholder="{% trans 'Имя' %}">
+                                    <input type="email" class="form-control border-top-0 border-right-0 border-left-0" name="email" id="footer-email" placeholder="{% trans 'Email' %}">
+                                    <input type="text" class="form-control border-top-0 border-right-0 border-left-0" name="phone_number" id="footer-phone" placeholder="{% trans 'Телефон ( обезательно )' %}">
+                                    <textarea name="message" class="form-control border-top-0 border-right-0 border-left-0" id="footerMessage" placeholder="{% trans 'Сообщение' %}"></textarea>
+                                    <button type="submit" class="btn medilife-btn">{% trans 'Отправить' %}</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-xl-3">
+                        <div class="footer-widget-area">
+                            <div class="widget-title">
+                                <h6>{% trans 'Мы Роботаем' %}</h6>
+                            </div>
+
+                            <div class="footer-newsletter-area">
+                                {% for i in about_us %}
+                                {% if forloop.counter0 < 1 %}
+                                <h5>{{ i.working_time }}</h5>
+                                {% endif %}
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Bottom Footer Area -->
+        <div class="bottom-footer-area">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="bottom-footer-content">
+                            <!-- Copywrite Text -->
+                            <div class="copywrite-text">
+                                <p>&copy; <script>document.write(new Date().getFullYear());</script>  Медсестра на дом / This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- ***** Footer Area End ***** -->
+
+    <!-- jQuery (Necessary for All JavaScript Plugins) -->
+    <script src="{% static 'js/jquery/jquery-2.2.4.min.js' %}"></script>
+    <!-- Popper js -->
+    <script src="{% static 'js/popper.min.js' %}"></script>
+    <!-- Bootstrap js -->
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <!-- Plugins js -->
+    <script src="{% static 'js/plugins.js' %}"></script>
+    <!-- Active js -->
+    <script src="{% static 'js/active.js' %}"></script>
+
+</body>
+
+</html>
